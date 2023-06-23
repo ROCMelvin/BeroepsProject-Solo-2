@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-   --main-color:#2B1103;
-   --sub-color:#666;
+   --main-color: #100303;
+      --sub-color: #daccb2;
    --white:#fff;
-   --border:.1rem solid var(--sub-color);
+   --border: .1rem solid rgba(181, 143, 143, 0.3);
 }
 
 *{
@@ -13,11 +13,12 @@
    box-sizing: border-box;
    outline: none; border: none;
    text-decoration: none;
+
 }
 
 *::selection{
-   background-color: var(--main-color);
-   color: var(--white);
+   background-color: var(--sub-color);
+      color: var(--main-color);
 }
 
 *::-webkit-scrollbar{
@@ -30,7 +31,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--main-color);
+   background-color: var(--sub-color);
    border-radius: 5rem;
 }
 
@@ -41,6 +42,10 @@ html{
    scroll-padding-top: 2rem;
 }
 
+body {
+   background-color: var(--main-color);
+   /* padding-bottom: 7.5rem; */
+}
 section{
    padding: 3rem 2rem;
    max-width: 1200px;
@@ -51,7 +56,7 @@ section{
    margin-bottom: 2rem;
    text-align: center;
    text-transform: capitalize;
-   color: var(--main-color);
+   color: var(--sub-color);
    font-size: 3rem;
 }
 
@@ -59,8 +64,9 @@ section{
    display: inline-block;
    cursor: pointer;
    padding: 1rem 3rem;
+   border: var(--border);
    font-size: 1.8rem;
-   color: var(--white);
+   color: var(--sub-color);
    text-align: center;
    text-transform: capitalize;
    transition: .2s linear;
@@ -70,13 +76,15 @@ section{
 
 .btn:hover{
    border-radius: 5rem;
+   background-color: var(--sub-color);
+      color: var(--main-color);
 }
 
 .header{
    border-bottom: var(--border);
    position: sticky;
    top: 0; left: 0; right: 0;
-   background-color: var(--white);
+   background-color: var(--main-color);
    z-index: 1000;
 }
 
@@ -90,7 +98,7 @@ section{
 
 .header .flex .logo{
    font-size: 2.5rem;
-   color: var(--main-color);
+   color: var(--sub-color);
 }
 
 .header .flex .navbar a{
@@ -113,6 +121,39 @@ section{
    display: none;
 }
 
+.bookings .heading {
+   text-align: center;
+   margin-bottom: 2rem;
+   color: var(--sub-color);
+   font-size: 2.5rem;
+   text-transform: capitalize;
+}
+
+.bookings .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.bookings .box-container .box {
+   border-radius: .5rem;
+   padding: 2rem;
+   padding-top: 1rem;
+   border: var(--border);
+}
+
+.bookings .box-container .box p {
+   line-height: 1.5;
+   padding-top: .5rem;
+   font-size: 1.8rem;
+   color: var(--sub-color);
+}
+
+.bookings .box-container .box p span {
+   color: var(--white);
+}
 .form-container{
    min-height: calc(100vh - 20rem);
    display: flex;
@@ -131,7 +172,7 @@ section{
 .form-container form h3{
    margin-bottom: 1rem;
    font-size: 2.5rem;
-   color: var(--main-color);
+   color: var(--sub-color);
    text-transform: capitalize;
 }
 
@@ -142,7 +183,7 @@ section{
 }
 
 .form-container form p span{
-   color: var(--main-color);
+   color: var(--sub-color);
 }
 
 .form-container form .box{
@@ -172,7 +213,7 @@ section{
 
 .dashboard .box-container h3{
    font-size: 2.5rem;
-   color: var(--main-color);
+   color: var(--sub-color);
    padding-bottom: 1rem;
 }
 
@@ -181,7 +222,7 @@ section{
    border-radius: .5rem;
    padding: 1.5rem;
    font-size: 1.8rem;
-   color: var(--main-color);
+   color: var(--white);
    margin: .5rem 0;
 }
 
@@ -212,7 +253,7 @@ section{
 }
 
 .grid .box-container .box p span{
-   color: var(--main-color);
+   color: var(--white);
 }
 
 

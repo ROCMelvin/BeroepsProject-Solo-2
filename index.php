@@ -25,9 +25,9 @@ if(isset($_POST['check'])){
 
    // als het hotel maar 10 kamers heeft
    if($total_rooms >= 10){
-      $warning_msg[] = 'kamers zijn niet beschikbaar';
+      $warning_msg[] = 'Kamers zijn niet beschikbaar';
    }else{
-      $success_msg[] = 'kamers zijn beschikbaar';
+      $success_msg[] = 'Kamers zijn beschikbaar';
    }
 
 }
@@ -61,19 +61,19 @@ if(isset($_POST['book'])){
       $total_rooms += $fetch_bookings['rooms'];
    }
 
-   if($total_rooms >= 30){
-      $warning_msg[] = 'kamers zijn niet beschikbaar';
+   if($total_rooms >= 10){
+      $warning_msg[] = 'Kamers zijn niet beschikbaar';
    }else{
 
       $verify_bookings = $conn->prepare("SELECT * FROM `bookings` WHERE user_id = ? AND name = ? AND email = ? AND number = ? AND rooms = ? AND check_in = ? AND check_out = ? AND adults = ? AND childs = ?");
       $verify_bookings->execute([$user_id, $name, $email, $number, $rooms, $check_in, $check_out, $adults, $childs]);
 
       if($verify_bookings->rowCount() > 0){
-         $warning_msg[] = 'kamer al geboekt!';
+         $warning_msg[] = 'Kamer al geboekt!';
       }else{
          $book_room = $conn->prepare("INSERT INTO `bookings`(booking_id, user_id, name, email, number, rooms, check_in, check_out, adults, childs) VALUES(?,?,?,?,?,?,?,?,?,?)");
          $book_room->execute([$booking_id, $user_id, $name, $email, $number, $rooms, $check_in, $check_out, $adults, $childs]);
-         $success_msg[] = 'kamer succesvol geboekt!';
+         $success_msg[] = 'Kamer succesvol geboekt!';
       }
 
    }
@@ -96,7 +96,7 @@ if(isset($_POST['send'])){
    $verify_message->execute([$name, $email, $number, $message]);
 
    if($verify_message->rowCount() > 0){
-      $warning_msg[] = 'bericht al verzonden!';
+      $warning_msg[] = 'Bericht al verzonden!';
    }else{
       $insert_message = $conn->prepare("INSERT INTO `messages`(id, name, email, number, message) VALUES(?,?,?,?,?)");
       $insert_message->execute([$id, $name, $email, $number, $message]);
@@ -142,7 +142,7 @@ if(isset($_POST['send'])){
             <img src="images/home-img-1.jpg" alt="">
             <div class="flex">
                <h3>Hotel Ter Duin</h3>
-               <a href="#availability" class="btn">beschikbaarheid controleren</a>
+               <a href="#availability" class="btn">Beschikbaarheid controleren</a>
             </div>
          </div>
 
@@ -150,7 +150,7 @@ if(isset($_POST['send'])){
             <img src="images/home-img-2.jpg" alt="">
             <div class="flex">
                <h3>eten en drinken</h3>
-               <a href="#reservation" class="btn">reserveren</a>
+               <a href="#reservation" class="btn">Reserveren</a>
             </div>
          </div>
 
@@ -180,15 +180,15 @@ if(isset($_POST['send'])){
    <form action="" method="post">
       <div class="flex">
          <div class="box">
-            <p>check in <span>*</span></p>
+            <p>Inchecken <span>*</span></p>
             <input type="date" name="check_in" class="input" required>
          </div>
          <div class="box">
-            <p>uitchecken<span>*</span></p>
+            <p>Uitchecken<span>*</span></p>
             <input type="date" name="check_out" class="input" required>
          </div>
          <div class="box">
-            <p>volwassenen <span>*</span></p>
+            <p>Volwassenen <span>*</span></p>
             <select name="adults" class="input" required>
                <option value="1">1 volwassene</option>
                <option value="2">2 volwassenen</option>
@@ -199,7 +199,7 @@ if(isset($_POST['send'])){
             </select>
          </div>
          <div class="box">
-            <p>kinderen <span>*</span></p>
+            <p>Kinderen <span>*</span></p>
             <select name="childs" class="input" required>
                <option value="-">geen kind</option>
                <option value="1">1 kind</option>
@@ -211,7 +211,7 @@ if(isset($_POST['send'])){
             </select>
          </div>
          <div class="box">
-            <p>kamer <span>*</span></p>
+            <p>Kamer <span>*</span></p>
             <select name="rooms" class="input" required>
                <option value="1">1 kamer</option>
                <option value="2">2 kamers</option>
@@ -305,22 +305,22 @@ if(isset($_POST['send'])){
 <section class="reservation" id="reservation">
 
    <form action="" method="post">
-      <h3>reserveren</h3>
+      <h3>Reserveren</h3>
       <div class="flex">
          <div class="box">
-            <p>uw naam <span>*</span></p>
+            <p>Uw naam <span>*</span></p>
             <input type="text" name="name" maxlength="50" required placeholder="Vul uw naam in" class="input">
          </div>
          <div class="box">
-            <p>uw email <span>*</span></p>
-            <input type="email" name="email" maxlength="50" required placeholder="voer uw e-mailadres in" class="input">
+            <p>Uw  email <span>*</span></p>
+            <input type="email" name="email" maxlength="50" required placeholder="Voer uw e-mailadres in" class="input">
          </div>
          <div class="box">
-            <p>uw telefoonnummer <span>*</span></p>
-            <input type="number" name="number" maxlength="10" min="0" max="9999999999" required placeholder="voer uw nummer in" class="input">
+            <p>Uw  telefoonnummer <span>*</span></p>
+            <input type="number" name="number" maxlength="10" min="0" max="9999999999" required placeholder="Voer uw nummer in" class="input">
          </div>
          <div class="box">
-            <p>kamers <span>*</span></p>
+            <p>Kamers <span>*</span></p>
             <select name="rooms" class="input" required>
                <option value="1" selected>1 kamer</option>
                <option value="2">2 kamers</option>
@@ -331,15 +331,15 @@ if(isset($_POST['send'])){
             </select>
          </div>
          <div class="box">
-            <p>check in <span>*</span></p>
+            <p>Uitchecken<span>*</span></p>
             <input type="date" name="check_in" class="input" required>
          </div>
          <div class="box">
-            <p>uitchecken <span>*</span></p>
+            <p>Uitchecken <span>*</span></p>
             <input type="date" name="check_out" class="input" required>
          </div>
          <div class="box">
-            <p>volwassenen <span>*</span></p>
+            <p>Volwassenen <span>*</span></p>
             <select name="adults" class="input" required>
                <option value="1" selected>1 volwassene</option>
                <option value="2">2 volwassenen</option>
@@ -350,7 +350,7 @@ if(isset($_POST['send'])){
             </select>
          </div>
          <div class="box">
-            <p>kinderen <span>*</span></p>
+            <p>Kinderen <span>*</span></p>
             <select name="childs" class="input" required>
                <option value="0" selected>geen kind</option>
                <option value="1">1 kind</option>
@@ -396,10 +396,10 @@ if(isset($_POST['send'])){
    <div class="row">
 
       <form action="" method="post">
-         <h3>stuur ons bericht</h3>
+         <h3>Stuur ons bericht</h3>
          <input type="text" name="name" required maxlength="50" placeholder="Vul uw naam in" class="box">
-         <input type="email" name="email" required maxlength="50" placeholder="voer uw e-mailadres in" class="box">
-         <input type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="voer uw nummer in" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="Voer uw e-mailadres in" class="box">
+         <input type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="Voer uw nummer in" class="box">
          <textarea name="message" class="box" required maxlength="1000" placeholder="Voer uw bericht in" cols="30" rows="10"></textarea>
          <input type="submit" value="bericht versturen" name="send" class="btn">
       </form>
@@ -407,19 +407,19 @@ if(isset($_POST['send'])){
       <div class="faq">
          <h3 class="title">Veel Gestelde Vragen</h3>
          <div class="box active">
-            <h3>hoe te annuleren?</h3>
+            <h3>Hoe te annuleren?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt aspernatur excepturi eos! Quibusdam, sapiente.</p>
          </div>
          <div class="box">
-            <h3>is er een vacature?</h3>
+            <h3>Is er een vacature?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam neque quaerat mollitia ratione? Soluta!</p>
          </div>
          <div class="box">
-            <h3>wat zijn de betaalmethoden?</h3>
+            <h3>Wat zijn de betaalmethoden?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam neque quaerat mollitia ratione? Soluta!</p>
          </div>
          <div class="box">
-            <h3>wat zijn de openingstijden?</h3>
+            <h3>Wat zijn de openingstijden?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam neque quaerat mollitia ratione? Soluta!</p>
          </div>
       </div>
@@ -428,7 +428,7 @@ if(isset($_POST['send'])){
 
 </section>
 
-<!-- contact section sectie eind  -->
+<!-- contact sectie eind  -->
 
 
 

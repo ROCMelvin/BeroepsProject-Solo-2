@@ -1,4 +1,4 @@
-<!-- header section starts  -->
+<!-- header sectie start  -->
 
 <section class="header">
 
@@ -14,10 +14,10 @@
       <a href="index.php#reservation">reservering</a>
       <a href="index.php#gallery">galerij</a>
       <a href="index.php#contact">contact</a>
-      <a href="bookings.php">mijn boekingen</a>
+     
       
    </nav>
 
 </section>
 
-<!-- header section ends -->
+<!-- header sectie eind -->

@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
 
 <section class="form-container" style="min-height: 100vh;">
 
-   <form action="dashboard.php" method="POST">
+   <form action="" method="POST">
       <h3>welkom terug!</h3>
       <p>standaard naam = <span>admin</span> & wachtwoord = <span>111</span></p>
       <input type="text" name="name" placeholder="Vul je gebruikersnaam in" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">

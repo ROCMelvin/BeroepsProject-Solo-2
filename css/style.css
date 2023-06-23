@@ -4,7 +4,7 @@
    --main-color:#100303;
    --sub-color:#daccb2;
    --white:#fff;
-   --border:.1rem solid rgba(0, 0, 0, 0.3);
+   --border: .1rem solid rgba(181, 143, 143, 0.3);
 }
 
 *{
@@ -13,7 +13,7 @@
    box-sizing: border-box;
    outline: none; border: none;
    text-decoration: none;
-   text-transform: capitalize;
+
 }
 
 *::selection{

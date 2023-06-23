@@ -1,9 +1,9 @@
 <?php
 
-include 'connect.php';
+include 'components/connect.php';
 
 setcookie('admin_id', '', time() - 1, '/');
 
-header('location:../admin/login.php');
+header('location:login.php');
 
 ?>

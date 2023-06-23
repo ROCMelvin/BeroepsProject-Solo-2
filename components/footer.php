@@ -14,21 +14,20 @@
       </div>
 
       <div class="box">
-         <a href="#home">home</a>
-         <a href="#about">over ons</a>
-         <a href="bookings.php">mijn boekingen</a>
-         <a href="#reservation">reservering</a>
-         <a href="#gallery">galerij</a>
-         <a href="#contact">contact</a>
-         <a href="login.php">medewerkers</a>
+         <a href="#home">Home</a>
+         <a href="#about">Over Ons</a>
+         <a href="#reservation">Reservering</a>
+         <a href="#gallery">Galerij</a>
+         <a href="#contact">Contact</a>
+         <a href="login.php">Medewerkers</a>
       </div>
       
 
       <div class="box">
-         <a href="#">facebook <i class="fab fa-facebook-f"></i></a>
-         <a href="#">twitter <i class="fab fa-twitter"></i></a>
-         <a href="#">instagram <i class="fab fa-instagram"></i></a>
-         <a href="#">tiktok <i class='fab fa-tiktok' ></i>
+         <a href="#">Facebook <i class="fab fa-facebook-f"></i></a>
+         <a href="#">Twitter <i class="fab fa-twitter"></i></a>
+         <a href="#">Instagram <i class="fab fa-instagram"></i></a>
+         <a href="#">Tiktok <i class='fab fa-tiktok' ></i>
       </div>
 
    </div>
