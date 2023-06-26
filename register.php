@@ -66,8 +66,8 @@ if(isset($_POST['submit'])){
    <form action="" method="POST">
       <h3>nieuwe registratie</h3>
       <input type="text" name="name" placeholder="Vul je gebruikersnaam in" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" placeholder="voer wachtwoord in" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="c_pass" placeholder="bevestig wachtwoord" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" placeholder="Voer wachtwoord in" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="c_pass" placeholder="Bevestig wachtwoord" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Registreer nu" name="submit" class="btn">
    </form>
 

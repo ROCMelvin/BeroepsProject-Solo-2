@@ -29,13 +29,14 @@ if(isset($_POST['cancel'])){
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>boekingen</title>
+   <title>Boekingen</title>
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
@@ -54,16 +55,17 @@ if(isset($_POST['cancel'])){
 
 <section class="bookings">
 
-   <h1 class="heading">mijn boekingen</h1>
+   <h1 class="heading">Boekingen</h1>
 
    <div class="box-container">
-
+  
    <?php
       $select_bookings = $conn->prepare("SELECT * FROM `bookings` WHERE user_id = ?");
       $select_bookings->execute([$user_id]);
       if($select_bookings->rowCount() > 0){
          while($fetch_booking = $select_bookings->fetch(PDO::FETCH_ASSOC)){
    ?>
+   
    <div class="box">
       <p>naam : <span><?= $fetch_booking['name']; ?></span></p>
       <p>email : <span><?= $fetch_booking['email']; ?></span></p>
@@ -84,8 +86,8 @@ if(isset($_POST['cancel'])){
    }else{
    ?>   
    <div class="box" style="text-align: center;">
-      <p style="padding-bottom: .5rem; text-transform:capitalize;">geen boekingen gevonden!</p>
-      <a href="index.php#reservation" class="btn">nieuwe boeking</a>
+      <p style="padding-bottom: .5rem; text-transform:capitalize;">Geen boekingen gevonden!</p>
+      <a href="index.php#reservation" class="btn">Nieuwe boeking</a>
    </div>
    <?php
    }

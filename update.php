@@ -87,10 +87,10 @@ if(isset($_POST['submit'])){
    <form action="" method="POST">
       <h3>update profiel</h3>
       <input type="text" name="name" placeholder="<?= $fetch_profile['name']; ?>" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="old_pass" placeholder="voer het oude wachtwoord in" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="new_pass" placeholder="nieuw wachtwoord invoeren" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="c_pass" placeholder="bevestig nieuw wachtwoord" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="update nu" name="submit" class="btn">
+      <input type="password" name="old_pass" placeholder="Voer het oude wachtwoord in" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="new_pass" placeholder="Nieuw wachtwoord invoeren" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="c_pass" placeholder="Bevestig nieuw wachtwoord" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="Update nu" name="submit" class="btn">
    </form>
 
 </section>

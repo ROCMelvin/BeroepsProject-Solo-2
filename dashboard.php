@@ -36,7 +36,7 @@ if(isset($_COOKIE['admin_id'])){
 
 <section class="dashboard">
 
-   <h1 class="heading">dashboard</h1>
+   <h1 class="heading">Dashboard</h1>
 
    <div class="box-container">
 
@@ -46,9 +46,9 @@ if(isset($_COOKIE['admin_id'])){
          $select_profile->execute([$admin_id]);
          $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
       ?>
-      <h3>welkom!</h3>
+      <h3>Welkom!</h3>
       <p><?= $fetch_profile['name']; ?></p>
-      <a href="update.php" class="btn">update profiel</a>
+      <a href="update.php" class="btn">Update Profiel</a>
    </div>
 
    <div class="box">
@@ -58,8 +58,8 @@ if(isset($_COOKIE['admin_id'])){
          $count_bookings = $select_bookings->rowCount();
       ?>
       <h3><?= $count_bookings; ?></h3>
-      <p>totale boekingen</p>
-      <a href="bookings.php" class="btn">boekingen bekijken</a>
+      <p>Totale Boekingen</p>
+      <a href="bookings.php" class="btn">Boekingen Bekijken</a>
    </div>
 
    <div class="box">
@@ -69,8 +69,8 @@ if(isset($_COOKIE['admin_id'])){
          $count_admins = $select_admins->rowCount();
       ?>
       <h3><?= $count_admins; ?></h3>
-      <p>totale admins</p>
-      <a href="admins.php" class="btn">admins bekijken</a>
+      <p>Totale Admins</p>
+      <a href="admins.php" class="btn">Admins Bekijken</a>
    </div>
 
    <div class="box">
@@ -80,15 +80,15 @@ if(isset($_COOKIE['admin_id'])){
          $count_messages = $select_messages->rowCount();
       ?>
       <h3><?= $count_messages; ?></h3>
-      <p>totale berichten</p>
-      <a href="messages.php" class="btn">berichten bekijken</a>
+      <p>Totale Berichten</p>
+      <a href="messages.php" class="btn">Berichten Bekijken</a>
    </div>
 
    <div class="box">
-      <h3>snel selecteren</h3>
-      <p>login of registreer</p>
-      <a href="login.php" class="btn" style="margin-right: 1rem;">login</a>
-      <a href="register.php" class="btn" style="margin-left: 1rem;">registreer</a>
+      <h3>Snel Selecteren</h3>
+      <p>Login of Registreer</p>
+      <a href="login.php" class="btn" style="margin-right: 1rem;">Login</a>
+      <a href="register.php" class="btn" style="margin-left: 1rem;">Registreer</a>
    </div>
 
    </div>
@@ -119,8 +119,8 @@ if(isset($_COOKIE['admin_id'])){
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
-<!-- custom js file link  -->
-<script src="../js/admin_script.js"></script>
+<!-- eigen js file link  -->
+<script src="js/admin_script.js"></script>
 
 <?php include 'components/message.php'; ?>
 
